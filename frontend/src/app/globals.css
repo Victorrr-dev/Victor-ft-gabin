@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* font-family: "Lora", serif; */
+/* font-family: "Playfair Display", serif; */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* --background: #0a0a0a; */
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+overflow-x: hidden;}
+
+.bg-st{
+ z-index: 1;
+}
+.backgroundst{
+height: 498px;
+}
+.chevron {
+  fill: white;
+}
+.btn{
+  background: #3f4eb4;
+  transition: 0.125s; 
+  transition-duration: 0.300;
+}
+.btn:hover{
+  /* border: 1px solid rgba(0, 0, 0, 0.137); */
+  background: #1e2551;
+  transition-duration: 0.300;
+}
+.card{
+  background: rgb(12,47,135);
+  background: linear-gradient(209deg, rgba(12,47,135,1) 0%, rgba(9,77,136,1) 37%, rgba(4,52,94,1) 100%);
+  animation: animationShadowCard 3s infinite ease-in-out;
+}
+/* .card:hover{
+  transition-duration: 0.300s;
+  transition: 0.750s;
+  box-shadow: -4px 5px 15px #ffffff;
+} */
+
+@keyframes animationShadowCard {
+  0% {
+    box-shadow: 4px 5px 15px #75a6e0;
+  }
+  25%{
+    box-shadow: rgb(117, 166, 224) -5px 6px 15px;
+  }
+  50%{
+    box-shadow: rgb(117, 166, 224) -7px -8px 15px;
+  }
+  75%{
+    box-shadow: rgb(117, 166, 224) 6px -6px 15px;
+  }
+  100%{
+    box-shadow: 4px 5px 15px #75a6e0;
+  }
+}
+.box-bg-language{
+ animation: languageMouv infinite 10s ease-in-out; 
+
+}
+
+@keyframes languageMouv {
+  0% {
+      transform: translateX(-1350px);
+
+  }50%{
+    transform: translateX(0px);
+
+
+  }100%{
+    transform: translateX(1320px);
+
+  }
+}
