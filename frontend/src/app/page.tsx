@@ -9,14 +9,9 @@ import chevron from "./public/images/bxs-chevrons-down.svg";
 import next from "next";
 import bg_next from "./public/images/BG/bg-next.js.png";
 import bg_nest from "./public/images/BG/Nest.js.png";
-import bg_tailwind from "./public/images/BG/bg-tailwind.png"
-import bg_javascript from "./public/images/BG/bg-javascript.png"
-import bg_typescript from "./public/images/BG/bg-typescript.png"
-
-
-
-
-
+import bg_tailwind from "./public/images/BG/bg-tailwind.png";
+import bg_javascript from "./public/images/BG/bg-javascript.png";
+import bg_typescript from "./public/images/BG/bg-typescript.png";
 
 export default function Home() {
   return (
@@ -140,49 +135,81 @@ export default function Home() {
           </div>
         </div>
         <div className="box-bg-language flex justify-between mt-20">
-            <Image
-          src={bg_next}
-          alt="logo next"
-          width={300}
-          height={30}
-          className="bg-next "
-        />
           <Image
-          src={bg_nest}
-          alt="logo next"
-          width={300}
-          height={30}
-          className="bg_nest"
-        />
-           <Image
-          src={bg_tailwind}
-          alt="logo next"
-          width={300}
-          height={30}
-          className="bg-tailwind"
-        />
+            src={bg_next}
+            alt="logo next"
+            width={300}
+            height={30}
+            className="bg-next "
+          />
           <Image
-          src={bg_javascript}
-          alt="logo next"
-          width={300}
-          height={30}
-          className="bg-javasccript h-40"
-        />
+            src={bg_nest}
+            alt="logo next"
+            width={300}
+            height={30}
+            className="bg_nest"
+          />
           <Image
-          src={bg_typescript}
-          alt="logo next"
-          width={300}
-          height={30}
-          className="bg-typescript h-40"
-        />
+            src={bg_tailwind}
+            alt="logo next"
+            width={300}
+            height={30}
+            className="bg-tailwind"
+          />
+          <Image
+            src={bg_javascript}
+            alt="logo next"
+            width={300}
+            height={30}
+            className="bg-javasccript h-40"
+          />
+          <Image
+            src={bg_typescript}
+            alt="logo next"
+            width={300}
+            height={30}
+            className="bg-typescript h-40"
+          />
         </div>
-      
       </section>
       <section className="layout h-svh bg-blue-950"></section>
       <hr />
       <section className="layout h-svh bg-blue-950">
-        <h2 className="flex justify-center font-serif pt-12 text-4xl">Contactez-nous</h2>
-        
+        <h2 className="flex justify-center font-serif pt-8 text-4xl">
+          Contactez-nous
+        </h2>
+        <div className="box-formulaire flex pt-8 justify-center">
+        <form action="#" method="POST" className="max-w-md w-full bg-white p-8 rounded-lg shadow-md space-y-6">
+    {/* <!-- Titre du formulaire --> */}
+    <h2 className="text-2xl font-bold text-gray-700 text-center">Contactez-nous</h2>
+
+    {/* <!-- Champ Nom --> */}
+    <div className="form-group">
+      <label form="name" className="block text-gray-600 mb-2">Nom</label>
+      <input type="text" id="name" name="name" required 
+             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+    </div>
+
+    {/* <!-- Champ Email --> */}
+    <div className="form-group">
+      <label form="email" className="block text-gray-600 mb-2">Email</label>
+      <input type="email" id="email" name="email" required
+             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+    </div>
+
+    {/* <!-- Champ Message --> */}
+    <div className="form-group">
+      <label form="message" className="block text-gray-600 mb-2">Message</label>
+      <textarea id="message" name="message" required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 min-h-[120px] resize-none"></textarea>
+    </div>
+{/* 
+    <!-- Bouton Envoyer --> */}
+    <button type="submit" className="w-full bg-indigo-500 text-white py-2 rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+      Envoyer
+    </button>
+  </form>
+        </div>
       </section>
     </main>
   );
